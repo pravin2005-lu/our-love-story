@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#120914">
+
+    <title>Happy Birthday Shibani ❤️</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         GLOBAL BACKGROUND
+    ====================================================== -->
+
+    <div class="global-background">
+        <div class="aurora aurora-one"></div>
+        <div class="aurora aurora-two"></div>
+        <div class="aurora aurora-three"></div>
+    </div>
+
+    <div id="particles"></div>
+    <div id="hearts"></div>
+    <div id="petals"></div>
+
+
+    <!-- =====================================================
+         MUSIC
+    ====================================================== -->
+
+    <audio id="backgroundMusic"
+        src="assets/music.mp3"
+        loop>
+    </audio>
+
+    <button id="musicButton"
+        class="music-button"
+        aria-label="Toggle music">
+        ♫
+    </button>
+
+
+    <!-- =====================================================
+         PROGRESS
+    ====================================================== -->
+
+    <div class="story-progress"
+        id="storyProgress">
+
+        <span class="progress-dot active"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-dot"></span>
+    </div>
+
+
+    <!-- =====================================================
+         SCREEN 1 — FIRST PASSWORD
+    ====================================================== -->
+
+    <main id="introScreen"
+        class="screen active-screen">
+
+        <div class="intro-content">
+
+            <div class="intro-orbit">
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <div class="intro-heart">
+                    ♥
+                </div>
+            </div>
+
+            <p class="eyebrow">
+                A LITTLE SURPRISE
+            </p>
+
+            <h1 class="intro-title">
+                Something special
+                <span>is waiting for you...</span>
+            </h1>
+
+            <p class="intro-subtitle">
+                Enter the secret code
+            </p>
+
+            <div class="pin-display"
+                id="firstPinDisplay">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="keypad">
+
+                <button data-key="1">1</button>
+                <button data-key="2">2</button>
+                <button data-key="3">3</button>
+
+                <button data-key="4">4</button>
+                <button data-key="5">5</button>
+                <button data-key="6">6</button>
+
+                <button data-key="7">7</button>
+                <button data-key="8">8</button>
+                <button data-key="9">9</button>
+
+                <button data-action="clear">C</button>
+                <button data-key="0">0</button>
+                <button data-action="delete">⌫</button>
+
+            </div>
+
+            <p class="pin-error"
+                id="firstPinError">
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCREEN 2 — SECOND PASSWORD
+    ====================================================== -->
+
+    <section id="secondPinScreen"
+        class="screen">
+
+        <div class="second-lock">
+
+            <div class="lock-symbol">
+                ♡
+            </div>
+
+            <p class="eyebrow">
+                ONE MORE LITTLE SECRET
+            </p>
+
+            <h2>
+                Almost there...
+            </h2>
+
+            <p class="second-subtitle">
+                Enter the second secret code
+            </p>
+
+            <div class="pin-display four"
+                id="secondPinDisplay">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="keypad">
+
+                <button data-second-key="1">1</button>
+                <button data-second-key="2">2</button>
+                <button data-second-key="3">3</button>
+
+                <button data-second-key="4">4</button>
+                <button data-second-key="5">5</button>
+                <button data-second-key="6">6</button>
+
+                <button data-second-key="7">7</button>
+                <button data-second-key="8">8</button>
+                <button data-second-key="9">9</button>
+
+                <button data-second-action="clear">C</button>
+                <button data-second-key="0">0</button>
+                <button data-second-action="delete">⌫</button>
+
+            </div>
+
+            <p class="pin-error"
+                id="secondPinError">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HORIZONTAL STORY
+    ====================================================== -->
+
+    <section id="storyWrapper"
+        class="story-wrapper">
+
+        <div class="story-track"
+            id="storyTrack">
+
+
+            <!-- =================================================
+                 SECTION 1 — BIRTHDAY INTRO
+            ================================================== -->
+
+            <article class="story-section birthday-intro">
+
+                <div class="section-glow"></div>
+
+                <div class="birthday-intro-content">
+
+                    <span class="tiny-label">
+                        TODAY IS ALL ABOUT YOU
+                    </span>
+
+                    <h1>
+                        Happy Birthday
+                        <span>Shibani</span>
+                        <b>♥</b>
+                    </h1>
+
+                    <p>
+                        A little journey,
+                        made especially for you.
+                    </p>
+
+                    <div class="scroll-hint">
+                        <span>Swipe to begin</span>
+                        <strong>→</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 2 — SURPRISE CARDS
+            ================================================== -->
+
+            <article class="story-section surprises-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        TWO LITTLE SURPRISES
+                    </span>
+
+                    <h2>
+                        Open your gifts
+                        <i>♥</i>
+                    </h2>
+
+                </div>
+
+                <div class="surprise-cards">
+
+                    <button class="surprise-card"
+                        data-surprise="letter">
+
+                        <div class="card-shine"></div>
+
+                        <div class="card-icon">
+                            💌
+                        </div>
+
+                        <span>
+                            A little letter
+                        </span>
+
+                        <strong>
+                            Open Me
+                        </strong>
+
+                        <small>
+                            Tap to reveal
+                        </small>
+
+                    </button>
+
+
+                    <button class="surprise-card"
+                        data-surprise="secret">
+
+                        <div class="card-shine"></div>
+
+                        <div class="card-icon">
+                            💝
+                        </div>
+
+                        <span>
+                            Something special
+                        </span>
+
+                        <strong>
+                            One More Surprise
+                        </strong>
+
+                        <small>
+                            There's more...
+                        </small>
+
+                    </button>
+
+                </div>
+
+                <div class="section-scroll-hint">
+                    Swipe →
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 3 — 19 MEMORIES
+            ================================================== -->
+
+            <article class="story-section memories-section">
+
+                <div class="memories-title">
+
+                    <span>
+                        LITTLE MOMENTS
+                    </span>
+
+                    <h2>
+                        Our Memories
+                    </h2>
+
+                    <p>
+                        Every picture holds a little piece
+                        of something beautiful.
+                    </p>
+
+                </div>
+
+                <div class="memory-rail"
+                    id="memoryRail">
+
+                    <!-- JavaScript creates all 19 photos -->
+
+                </div>
+
+                <div class="photo-counter"
+                    id="photoCounter">
+                    01 / 19
+                </div>
+
+                <div class="memory-hint">
+                    Swipe through our memories →
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 4 — GORGEOUS MESSAGE
+            ================================================== -->
+
+            <article class="story-section gorgeous-section">
+
+                <div class="gorgeous-background"></div>
+
+                <div class="gorgeous-content">
+
+                    <div class="sparkle-icon">
+                        ✦
+                    </div>
+
+                    <span class="tiny-label">
+                        FOR THE BIRTHDAY GIRL
+                    </span>
+
+                    <h2>
+                        Happy Birthday,
+                        <span>gorgeous!</span>
+                    </h2>
+
+                    <div class="gold-line"></div>
+
+                    <p class="gorgeous-message">
+                        I hope today brings you
+                        endless joy and smiles.
+                    </p>
+
+                    <div class="gundu">
+                        Happy Birthday
+                        <span>Gundu 😄</span>
+                    </div>
+
+                    <div class="floating-heart-big">
+                        ♥
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 5 — WHATSAPP JOURNEY
+            ================================================== -->
+
+            <article class="story-section whatsapp-section">
+
+                <div class="chat-bg"></div>
+
+                <div class="chat-heading">
+
+                    <span>
+                        A FEW WORDS FROM MY HEART
+                    </span>
+
+                    <h2>
+                        Just for you
+                        <i>♥</i>
+                    </h2>
+
+                </div>
+
+                <div class="whatsapp-stage"
+                    id="whatsappStage">
+
+                    <!-- JavaScript loads 8 screenshots -->
+
+                </div>
+
+                <div class="message-number"
+                    id="messageNumber">
+                    01 / 08
+                </div>
+
+                <div class="chat-hint">
+                    Keep going →
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 6 — FINAL PHOTO
+            ================================================== -->
+
+            <article class="story-section final-photo-section">
+
+                <div class="final-photo-background"></div>
+
+                <div class="final-photo-content">
+
+                    <div class="final-photo-frame">
+
+                        <img src="assets/final.jpg"
+                            alt="A special memory">
+
+                        <div class="photo-frame-glow"></div>
+
+                    </div>
+
+                    <div class="final-love-text">
+
+                        <span>
+                            Through everything...
+                        </span>
+
+                        <h2>
+                            I'll Stay
+                            <strong>With You</strong>
+                            <b>♥</b>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SECTION 7 — GRAND FINALE
+            ================================================== -->
+
+            <article class="story-section finale-section">
+
+                <div class="finale-stars"></div>
+
+                <div class="finale-content">
+
+                    <span class="finale-small">
+                        AND NOW...
+                    </span>
+
+                    <div class="cake">
+                        🎂
+                    </div>
+
+                    <h1 class="finale-title">
+
+                        <span>HAPPY</span>
+
+                        <span>BIRTHDAY</span>
+
+                    </h1>
+
+                    <div class="finale-name">
+                        Shibani
+                        <b>♥</b>
+                    </div>
+
+                    <div class="finale-line"></div>
+
+                    <p>
+                        Forever Special ✨
+                    </p>
+
+                    <div class="finale-hearts">
+                        ♥　♥　♥
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SURPRISE MODAL
+    ====================================================== -->
+
+    <div id="surpriseModal"
+        class="modal">
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card"
+            id="modalCard">
+
+            <button class="modal-close"
+                id="modalClose"
+                aria-label="Close">
+                ×
+            </button>
+
+            <div id="modalContent">
+
+                <!-- JavaScript inserts content -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
