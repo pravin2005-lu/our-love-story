@@ -9,7 +9,7 @@
 ========================================================== */
 
 const CONFIG = {
-    firstPassword: "27092005",
+    firstPassword: "31122024",
     secondPassword: "1527",
 
     totalPhotos: 18,
